@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>login page</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<style type="text/css" class="aditya">
+		body{
+			background-image: url(../image/bg.jpg);
+			background-repeat: no-repeat; 
+			background-size: cover;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+		}
+	</style>
+</head>
+<body>
+	<div class="login-box">
+		<h1>Login</h1>
+		<div class="textbox">
+			<form method="GET" action="home.html" onsubmit="return check()">
+				<i class="fa fa-user" aria-hidden="true"></i>
+		   		<input type="text" placeholder="Username" id="Username" required=" ">
+	    		</div>
+	    		<div class="textbox">
+	    		<i class="fa fa-lock" aria-hidden="true"></i>
+	    		<input type="password" placeholder="password" id="password" required="" >
+	    		    	
+	  	 	 </div>
+	    		&nbsp;&nbsp;<input class="btn" id="but" type="submit" name="" value="login">
+			</form>
+	</div>
+<script type="text/javascript">
+	function check()
+	{
+	  var Username=document.getElementById("Username").value;
+	  var password=document.getElementById("password").value;
+	  var list={aditya:7452,arpit:8400};
+	  var flag=0;
+	  for(i in list)
+	  {
+	  	if(i==Username)
+	  	{
+	  		if(list[i]==password)
+	  		{
+	  			flag=1;
+	  			break;
+	  		}
+	  	}
+	  }
+	  if(flag==1)
+	  {
+	     true;
+	  }
+	  else
+	  {
+	  	alert("some thing is worng");
+	  	return false;
+	  }
+	}
+</script>
+<script type="text/javascript" src="../javascript/first.js"></script>
+</body>
+</html>
